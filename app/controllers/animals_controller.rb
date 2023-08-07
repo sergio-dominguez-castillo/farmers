@@ -22,6 +22,8 @@ class AnimalsController < ApplicationController
   # POST /animals or /animals.json
   def create
     @animal = Animal.new(animal_params)
+    # asociamos un granjero al animal
+    @animal.farmer = Farmer.last   
 
     respond_to do |format|
       if @animal.save
