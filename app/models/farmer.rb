@@ -1,7 +1,7 @@
 class Farmer < ApplicationRecord
-    has_many :animals
+    belongs_to :farm
 
-    def to_s
-        self.name
-    end
+    # def to_s
+    #     self.name
+    # end
 end
